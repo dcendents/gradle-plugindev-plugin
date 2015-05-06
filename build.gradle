@@ -17,8 +17,8 @@ dependencies {
     compile "nu.studer:java-ordered-properties:$orderedPropertiesVersion"
 }
 
-group = 'nu.studer'
-version = '1.0.4.DEV'
+group = 'com.github.dcendents'
+version = '1.0.4.20150505'
 
 plugindev {
     pluginDescription 'Gradle plugin that facilitates the bundling and uploading of Gradle plugins as expected by the Gradle Plugin Portal, JCenter, and MavenCentral.'
@@ -34,8 +34,8 @@ plugindev {
 }
 
 bintray {
-    user = credentials.BINTRAY_USER
-    key = credentials.BINTRAY_API_KEY
+	user = "${bintrayUsername}"
+	key = "${bintrayApiKey}"
     pkg.repo = 'gradle-plugins'
     dryRun = false
 }
